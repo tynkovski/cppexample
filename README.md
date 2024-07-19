@@ -1,25 +1,33 @@
-# Installation
+# Guide
+
+Requirements
+============
 
 First install dependencies:
 
-install curl library
+Install cmake 
+
+```
+sudo dnf install cmake
+```
+
+Install curl library and cpr wrapper
 
 ``` bash
 sudo dnf install libcurl-devel
-```
-
-and install and cpr wrapper
-
-``` bash
 sudo dnf install cpr-devel
 ```
 
-install boost
+Install boost
+
 ``` bash
-sudo yum install boost-devel
+sudo dnf install boost-devel
 ```
 
-then build the shared lib:
+Building
+========
+
+Build the shared lib:
 ``` bash
 cd path/to/project/mylib
 cmake -S . -B build
@@ -27,13 +35,20 @@ cd build
 sudo make install
 ```
 
-build program and run
+build program
 
 ``` bash
 cd path/to/project/myprogram
 cmake -S . -B build
 cd build
 make
-./main
 ```
 
+Usage
+=====
+
+run program
+``` bash
+cd path/to/project/myprogram/build
+./main
+```
